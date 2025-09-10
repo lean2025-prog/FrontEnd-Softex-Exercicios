@@ -1,0 +1,7 @@
+<meta charset="UTF-8">
+<script>
+    const horas = Number(prompt("Total de horas de viagem:"))
+    const parteInteira = Math.trunc(horas/24)
+    const parteDecimal = (horas/24) - parteInteira
+    alert(`Total de horas da viagem: ${horas.toFixed(0)}\nNº de dias da viagem: ${parteInteira.toFixed(0)}\nNº de horas da viagem: ${(parteDecimal * 24).toFixed(0)}`)
+</script>
