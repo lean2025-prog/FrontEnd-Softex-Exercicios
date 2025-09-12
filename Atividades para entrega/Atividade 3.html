@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+    const dataAtual = new Date();
+    const anoNascimento = Number(prompt("Digite seu ano de nascimento:"));
+    let anos = dataAtual.getFullYear() - anoNascimento;
+    alert(`ano de nascimento ${anoNascimento}\nIdade atual: ${anos}`)
+    const mesNascimento = Number(prompt('Digite o número do seu mês de nascimento:'))
+    const mesAtual = dataAtual.getMonth() + 1;
+    let meses = mesAtual- mesNascimento
+    if(meses < 0){
+        anos = anos - 1;
+        meses = meses + 12;
+
+    }
+    alert(`Ano de nascimento: ${anoNascimento}\nIdade Atual: ${anos} anos e ${meses} meses`);
+    const diaNascimento = Number(prompt("Digite seu dia de nascimento:"));
+    const nascimento = new Date(anoNascimento, mesNascimento - 1, diaNascimento);
+    let dias = dataAtual.getDate() - nascimento.getDate();
+    if(dias<0){
+        meses = meses - 1;
+        const ultimomes = new Date(dataAtual.getFullYear(), dataAtual.getMonth(), 0);
+        dias = dias + ultimomes.getData();
+}
+alert(`Ano de nascimento: ${anoNascimento}\nIdade atual: ${anos} anos, ${meses} meses e ${dias} dias`)
+
+</script>
